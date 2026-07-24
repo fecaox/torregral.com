@@ -72,16 +72,10 @@ summary:focus-visible {
 }
 
 .brand-mark {
-  display: grid;
+  display: block;
   width: 42px;
   height: 42px;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--forest);
-  color: var(--gold);
-  font-family: var(--serif);
-  font-size: 26px;
-  line-height: 1;
+  object-fit: contain;
 }
 
 .brand-name {
