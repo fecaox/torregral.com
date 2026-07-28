@@ -3,20 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Torrégral - Et si le problème n'était pas le café ?</title>
+    <title>Torrégral - Café premium pour énergie stable et clarté mentale</title>
     <meta
       name="description"
-      content="Torrégral est un café premium nouvelle génération: le goût du café, une approche plus complète de la cerise de café, et une énergie plus claire."
+      content="Torrégral est un café premium nouvelle génération: le goût du café torréfié, une approche plus complète de la cerise de café, une énergie plus stable et une clarté mentale plus durable."
     />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Torrégral - Et si le problème n'était pas le café ?" />
+    <meta property="og:title" content="Torrégral - Café premium pour énergie stable et clarté mentale" />
     <meta
       property="og:description"
-      content="Pas un substitut. Pas une boisson aux champignons. Du café, simplement plus complet."
+      content="Pas un substitut. Pas une boisson aux champignons. Un café premium plus complet, pensé pour une énergie plus stable."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.torregral.com/" />
     <meta property="og:image" content="https://www.torregral.com/assets/images/home-hero-tasse-paquet.jpg" />
+    <meta property="og:image:alt" content="Tasse de café avec un paquet Torrégral noir mat" />
+    <meta property="og:site_name" content="Torrégral" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Torrégral - Café premium pour énergie stable et clarté mentale" />
+    <meta
+      name="twitter:description"
+      content="Le goût du café, avec une approche plus complète de la cerise de café."
+    />
+    <meta name="twitter:image" content="https://www.torregral.com/assets/images/home-hero-tasse-paquet.jpg" />
     <link rel="canonical" href="https://www.torregral.com/" />
     <link rel="icon" type="image/png" href="assets/images/logo-cafe-integral.png" />
     <link rel="preload" as="image" href="assets/images/home-hero-tasse-paquet.jpg" />
@@ -335,31 +344,109 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
           {
-            "@type": "Question",
-            "name": "Est-ce encore du café ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Oui. Torrégral est du café réel, pensé de manière plus complète."
+            "@type": "Organization",
+            "@id": "https://www.torregral.com/#organization",
+            "name": "Torrégral",
+            "url": "https://www.torregral.com/",
+            "logo": "https://www.torregral.com/assets/images/logo-cafe-integral.png",
+            "sameAs": [
+              "https://www.instagram.com/cafe_integral/",
+              "https://www.facebook.com/cafeintegralfrance/",
+              "https://www.youtube.com/@cafe-integral",
+              "https://fr.linkedin.com/company/caf%C3%A9-int%C3%A9gral"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.torregral.com/#website",
+            "url": "https://www.torregral.com/",
+            "name": "Torrégral",
+            "publisher": {
+              "@id": "https://www.torregral.com/#organization"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.torregral.com/#webpage",
+            "url": "https://www.torregral.com/",
+            "name": "Torrégral - Café premium pour énergie stable et clarté mentale",
+            "description": "Torrégral est un café premium nouvelle génération: le goût du café torréfié, une approche plus complète de la cerise de café, une énergie plus stable et une clarté mentale plus durable.",
+            "isPartOf": {
+              "@id": "https://www.torregral.com/#website"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://www.torregral.com/assets/images/home-hero-tasse-paquet.jpg"
+            },
+            "breadcrumb": {
+              "@id": "https://www.torregral.com/#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.torregral.com/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://www.torregral.com/"
+              }
+            ]
+          },
+          {
+            "@type": "Product",
+            "@id": "https://www.torregral.com/#product",
+            "name": "Torrégral",
+            "brand": {
+              "@type": "Brand",
+              "name": "Torrégral"
+            },
+            "description": "Café premium nouvelle génération, avec le goût du café torréfié et une approche plus complète de la cerise de café.",
+            "image": [
+              "https://www.torregral.com/assets/images/paquet-torregal.jpg",
+              "https://www.torregral.com/assets/images/home-hero-tasse-paquet.jpg"
+            ],
+            "category": "Café",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://buy.stripe.com/00w8wPg20aWQcMu39Q8k80c",
+              "availability": "https://schema.org/InStock"
             }
           },
           {
-            "@type": "Question",
-            "name": "Est-ce un substitut au café ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Non. Ce n'est pas un faux café. C'est une autre manière de boire le café."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Comment le préparer ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Comme votre café habituel: cafetière filtre, piston, expresso ou méthodes douces."
-            }
+            "@type": "FAQPage",
+            "@id": "https://www.torregral.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Est-ce encore du café ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Oui. Torrégral est du café réel, pensé de manière plus complète."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Est-ce un substitut au café ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Non. Ce n'est pas un faux café. C'est une autre manière de boire le café."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Comment le préparer ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Comme votre café habituel: cafetière filtre, piston, expresso ou méthodes douces."
+                }
+              }
+            ]
           }
         ]
       }
