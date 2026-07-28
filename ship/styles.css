@@ -139,7 +139,7 @@ summary:focus-visible {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.98fr) minmax(340px, 0.86fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(480px, 1.1fr);
   gap: clamp(34px, 7vw, 96px);
   align-items: center;
   min-height: calc(100vh - 82px);
@@ -276,10 +276,14 @@ p {
   box-shadow: var(--shadow);
 }
 
+.hero-media {
+  aspect-ratio: 16 / 9;
+}
+
 .hero-media img {
   width: 100%;
-  height: min(70vh, 720px);
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
 }
 
 .belief-strip {
@@ -731,6 +735,10 @@ p {
   .story-section figure img,
   .offer-section figure img {
     height: 430px;
+  }
+
+  .hero-media img {
+    height: 100%;
   }
 
   .product-card {
