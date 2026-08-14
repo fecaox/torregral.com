@@ -48,7 +48,7 @@ const pages = [
         ]
       }
     ],
-    related: ["hpi", "tdh", "overthinker", "hypersensible"]
+    related: ["hpi", "tdah", "overthinker", "hypersensible"]
   },
   {
     slug: "hpi",
@@ -93,7 +93,7 @@ const pages = [
     related: ["overthinker", "multipotentiel", "cafe-focus", "ship"]
   },
   {
-    slug: "tdh",
+    slug: "tdah",
     eyebrow: "Café pour TDAH",
     title: "Un café pour TDAH orienté focus, pas agitation",
     seoTitle: "Café pour TDAH - Torrégral, énergie stable et rituel focus",
@@ -391,7 +391,7 @@ const pages = [
         ]
       }
     ],
-    related: ["dyslexie", "tdh", "cafe-focus", "neuroatypiques"]
+    related: ["dyslexie", "tdah", "cafe-focus", "neuroatypiques"]
   },
   {
     slug: "cerveau-en-ebullition",
@@ -477,7 +477,7 @@ const pages = [
         ]
       }
     ],
-    related: ["neuroatypiques", "hpi", "tdh", "hypersensible"]
+    related: ["neuroatypiques", "hpi", "tdah", "hypersensible"]
   },
   {
     slug: "fatigue-mentale",
@@ -520,7 +520,7 @@ const pages = [
         ]
       }
     ],
-    related: ["cafe-sans-crash", "cafe-energie-stable", "tdh", "neuroatypiques"]
+    related: ["cafe-sans-crash", "cafe-energie-stable", "tdah", "neuroatypiques"]
   },
   {
     slug: "createur-intense",
@@ -704,21 +704,21 @@ for (const page of pages) {
   writeFileSync(join(dir, "index.html"), renderPage(page));
 }
 
-const aliasDir = join(root, "tdah");
+const aliasDir = join(root, "tdh");
 mkdirSync(aliasDir, { recursive: true });
 writeFileSync(
   join(aliasDir, "index.html"),
-  `<!doctype html><html lang="fr"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Café pour TDAH - Torrégral</title><meta name="robots" content="noindex, follow" /><link rel="canonical" href="https://www.torregral.com/tdh/" /><meta http-equiv="refresh" content="0; url=../tdh/" /></head><body><p><a href="../tdh/">Café pour TDAH - Torrégral</a></p></body></html>`
+  `<!doctype html><html lang="fr"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Café pour TDAH - Torrégral</title><meta name="robots" content="noindex, follow" /><link rel="canonical" href="https://www.torregral.com/tdah/" /><meta http-equiv="refresh" content="0; url=../tdah/" /></head><body><p><a href="../tdah/">Café pour TDAH - Torrégral</a></p></body></html>`
 );
 
 const sitemapPath = join(root, "sitemap.xml");
 let sitemap = readFileSync(sitemapPath, "utf8");
 sitemap = sitemap.replace(/\s*<\/urlset>\s*$/, "");
 const existing = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
-for (const slug of [...navPages, "tdah"]) {
+for (const slug of navPages) {
   const loc = `https://www.torregral.com/${slug}/`;
   if (!existing.has(loc)) {
-    const priority = slug === "neuroatypiques" ? "0.8" : slug === "tdah" ? "0.3" : "0.7";
+    const priority = slug === "neuroatypiques" ? "0.8" : "0.7";
     sitemap += `\n  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
   }
 }
