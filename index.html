@@ -34,6 +34,40 @@
     <link rel="icon" type="image/png" href="assets/images/logo-cafe-integral.png" />
     <link rel="preload" as="image" href="assets/images/home-hero-tasse-paquet.jpg" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Torrégral",
+        "description": "Torrégral est le Café Intégral qui garde le goût familier du café. Café moulu 100 % Arabica d’origine Costa Rica, élaboré exclusivement à partir du café et de son fruit.",
+        "image": [
+          "https://www.torregral.com/assets/images/paquet-torregal.jpg",
+          "https://www.torregral.com/assets/images/home-hero-tasse-paquet.jpg"
+        ],
+        "brand": {
+          "@type": "Brand",
+          "name": "Café Intégral"
+        },
+        "category": "Café moulu",
+        "countryOfOrigin": {
+          "@type": "Country",
+          "name": "Costa Rica"
+        },
+        "additionalProperty": {
+          "@type": "PropertyValue",
+          "name": "Portion conseillée",
+          "value": "12 g par tasse"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.torregral.com/#commander",
+          "priceCurrency": "EUR",
+          "price": "15.00",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -328,7 +362,9 @@
             <span>100% café</span>
             <span>Sans champignons</span>
             <span>Préparation classique</span>
+            <span>12 g par tasse</span>
           </div>
+          <p class="offer-price"><strong>15,00&nbsp;€</strong> le paquet</p>
           <a class="button red" href="https://buy.stripe.com/00w8wPg20aWQcMu39Q8k80c">Commander Torrégral</a>
         </div>
         <figure>

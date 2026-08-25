@@ -749,6 +749,20 @@ p {
   color: rgba(255, 248, 235, 0.72);
 }
 
+.offer-section .offer-price {
+  margin: 22px 0 18px;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.offer-section .offer-price strong {
+  display: inline-block;
+  margin-right: 6px;
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 600;
+}
+
 .offer-section figure {
   display: grid;
   min-height: 560px;
