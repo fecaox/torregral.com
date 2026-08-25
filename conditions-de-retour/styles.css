@@ -1,0 +1,200 @@
+:root {
+  color-scheme: light;
+  --ink: #241714;
+  --muted: #6e5c55;
+  --wine: #6f241f;
+  --wine-dark: #421512;
+  --cream: #f7efe4;
+  --paper: #fffdfa;
+  --line: #dfd2c5;
+  --gold: #b8873d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--wine);
+}
+
+.policy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1.25rem, 4vw, 4rem);
+  color: white;
+  background: var(--wine-dark);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand img {
+  border-radius: 50%;
+}
+
+.back-link {
+  color: white;
+  font-weight: 700;
+  text-underline-offset: 0.25rem;
+}
+
+main {
+  width: min(920px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.policy-hero {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--wine);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+}
+
+h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
+}
+
+.intro {
+  max-width: 700px;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+}
+
+.updated {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.policy-card {
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: 0 1.5rem 4rem rgb(63 27 17 / 8%);
+}
+
+.policy-card section {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-card section:last-child {
+  border-bottom: 0;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  color: var(--wine-dark);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+p,
+li {
+  color: #493934;
+}
+
+ul,
+ol {
+  padding-left: 1.35rem;
+}
+
+.notice {
+  margin: 1.25rem 0;
+  padding: 1.1rem 1.25rem;
+  border-left: 4px solid var(--gold);
+  background: #fff6e7;
+  font-weight: 700;
+}
+
+.form-section {
+  background: #f2e2d2;
+}
+
+blockquote {
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.2rem;
+  color: white;
+  background: var(--wine);
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  justify-content: center;
+  padding: 2rem 1rem;
+  color: #eaded4;
+  background: var(--wine-dark);
+}
+
+footer a {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .policy-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .back-link {
+    font-size: 0.9rem;
+  }
+
+  main {
+    width: min(100% - 1.25rem, 920px);
+  }
+
+  .policy-card {
+    border-radius: 0.9rem;
+  }
+}
