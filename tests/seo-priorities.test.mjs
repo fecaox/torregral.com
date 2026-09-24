@@ -29,6 +29,14 @@ test("la page pédagogique transmet un lien contextuel vers le guide café natur
   assert.match(explainer, /href="\.\.\/cafe-adaptogene-naturel\/">café naturel et café adaptogène<\/a>/);
 });
 
+test("la page pédagogique date également sa mise à jour", () => {
+  assert.match(explainer, /"dateModified": "2026-09-24"/);
+  assert.match(
+    sitemap,
+    /<loc>https:\/\/www\.torregral\.com\/qu-est-ce-qu-un-cafe\/<\/loc>\s*<lastmod>2026-09-24<\/lastmod>/,
+  );
+});
+
 for (const slug of ["cafe-energie-stable", "cafe-sans-crash", "cafe-focus"]) {
   test(`${slug} renforce la page café adaptogène naturel`, async () => {
     const html = await readFile(new URL(`../${slug}/index.html`, import.meta.url), "utf8");
