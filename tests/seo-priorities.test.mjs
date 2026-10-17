@@ -43,3 +43,12 @@ for (const slug of ["cafe-energie-stable", "cafe-sans-crash", "cafe-focus"]) {
     assert.match(html, /href="\.\.\/cafe-adaptogene-naturel\/"/);
   });
 }
+
+test("Google Analytics reste bloqué tant que le visiteur n’a pas consenti", async () => {
+  const script = await readFile(new URL("../script.js", import.meta.url), "utf8");
+  assert.match(script, /G-8V7MLJZSPN/);
+  assert.match(script, /analytics_storage/);
+  assert.match(script, /googletagmanager\.com\/gtag\/js/);
+  assert.match(script, /localStorage/);
+  assert.match(script, /Gérer les cookies/);
+});
