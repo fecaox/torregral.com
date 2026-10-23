@@ -29,6 +29,16 @@ if (navToggle && nav) {
   window.gtag("consent", "default", { ad_storage: "denied", analytics_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
   const readChoice = () => { try { return localStorage.getItem(storageKey); } catch { return null; } };
   const saveChoice = (value) => { try { localStorage.setItem(storageKey, value); } catch { /* Storage can be unavailable. */ } };
+  document.addEventListener("click", (event) => {
+    const link = event.target instanceof Element ? event.target.closest('a[href^="https://buy.stripe.com/"]') : null;
+    if (!link || readChoice() !== "granted") return;
+    window.gtag("event", "begin_checkout", {
+      currency: "EUR",
+      link_url: link.href,
+      link_text: link.textContent.trim(),
+      transport_type: "beacon",
+    });
+  });
   function loadAnalytics() {
     window.gtag("consent", "update", { analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
     if (document.querySelector(`script[data-google-analytics="${measurementId}"]`)) return;
